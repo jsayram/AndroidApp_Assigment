@@ -1,1 +1,1 @@
-include ':mealprep', ':mealprep_app', ':app'
+include ':app'
