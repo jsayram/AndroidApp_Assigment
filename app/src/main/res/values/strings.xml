@@ -3,4 +3,9 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main2">BLD_Activity</string>
     <string name="title_activity_diet_screen_">DietScreen_Activity</string>
+    <string name="Testing_HelloWorld">Hello World Its Chef-D\'s Meal Prep!</string>
+
+
+
+
 </resources>
