@@ -8,9 +8,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private TextView titleTextView;
+    private Button breakfastButton,lunchButton,dinnerButton;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,16 +28,50 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        findViewsContentMain();
+        setUpContentMainButtons();
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Type of diet you have", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    private void setUpContentMainButtons() {
+        breakfastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Breakfast Options", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        lunchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Lunch Options", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        dinnerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Dinner Options", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void findViewsContentMain() {
+
+        titleTextView = (TextView) findViewById(R.id.title_home_screen);
+        breakfastButton = (Button) findViewById(R.id.breakfast);
+        lunchButton = (Button) findViewById(R.id.lunch);
+        dinnerButton = (Button) findViewById(R.id.dinner);
+
     }
 
     @Override

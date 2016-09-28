@@ -4,16 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.chefd.mealprep.mealprep.MainActivity"
+    android:background="@color/darkBlue"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+    <TextView android:id="@+id/title_home_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/OverHeadMainScreenText"
+        android:textSize="50sp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/title_home_screen"
+        android:gravity="center">
+    <Button android:id="@+id/breakfast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Testing_HelloWorld" />
+        android:text="@string/MainTopButton"
+        android:textColor="@color/wordColor"/>
+
+    <Button android:id="@+id/lunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/MainMiddleButton"
+        android:textColor="@color/wordColor"
+        android:layout_below="@+id/breakfast"/>
+
+    <Button android:id="@+id/dinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/MainBottomButton"
+        android:textColor="@color/wordColor"
+        android:layout_below="@+id/lunch"/>
+    </LinearLayout>
 </RelativeLayout>
