@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
-        android:text="Findr"
+        android:text="@string/OverHeadMainScreenText"
         android:textSize="50sp"
         android:gravity="center"/>
     <LinearLayout
@@ -26,20 +26,20 @@
     <Button android:id="@+id/breakfast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Breakfast"
+        android:text="@string/MainTopButton"
         android:textColor="@color/wordColor"/>
 
     <Button android:id="@+id/lunch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lunch"
+        android:text="@string/MainMiddleButton"
         android:textColor="@color/wordColor"
         android:layout_below="@+id/breakfast"/>
 
     <Button android:id="@+id/dinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dinner"
+        android:text="@string/MainBottomButton"
         android:textColor="@color/wordColor"
         android:layout_below="@+id/lunch"/>
     </LinearLayout>
