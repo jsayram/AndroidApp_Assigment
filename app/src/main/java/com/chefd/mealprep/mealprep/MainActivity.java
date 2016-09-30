@@ -1,5 +1,6 @@
 package com.chefd.mealprep.mealprep;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,11 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView titleTextView;
     private Button breakfastButton,lunchButton,dinnerButton;
-
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Breakfast Options", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent (MainActivity.this, Breakfast_Activity1.class);
+                startActivity(intent);
+
             }
         });
 
@@ -54,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Lunch Options", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent (MainActivity.this, DietScreen_Activity.class);
+                startActivity(intent);
             }
         });
 
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Dinner Options", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent (MainActivity.this, DietScreen_Activity.class);
+                startActivity(intent);
             }
         });
     }

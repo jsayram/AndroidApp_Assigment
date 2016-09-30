@@ -14,23 +14,25 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.default" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".DietScreen_Activity"
             android:label="@string/title_activity_diet_screen_"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Splash">
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN"/>
-                    <category android:name="android.intent.category.LAUNCHER"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".Breakfast_Activity1"
+            android:label="@string/title_activity_breakfast_1"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

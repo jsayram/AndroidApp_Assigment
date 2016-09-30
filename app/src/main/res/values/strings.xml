@@ -8,6 +8,11 @@
     <string name="MainTopButton">Breakfast</string>
     <string name="MainMiddleButton">lunch</string>
     <string name="MainBottomButton">Dinner</string>
+    <string name="title_activity_breakfast_1">Breakfast_Activity1</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="protein">protein</string>
+    <string name="Carbohydrates">Carbohydrates</string>
+    <string name="Vegetables">Vegetables</string>
 
 
 </resources>
