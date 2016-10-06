@@ -13,6 +13,6 @@
     <string name="protein">protein</string>
     <string name="Carbohydrates">Carbohydrates</string>
     <string name="Vegetables">Vegetables</string>
-
+    <string name="Favorite">Favorite</string>
 
 </resources>

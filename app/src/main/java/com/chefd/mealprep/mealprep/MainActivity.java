@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
         breakfastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Breakfast Options", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent (MainActivity.this, Breakfast_Activity1.class);
+                Intent intent = new Intent(MainActivity.this,BreakfastActivity.class);
                 startActivity(intent);
 
             }
@@ -53,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Lunch Options", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent (MainActivity.this, DietScreen_Activity.class);
-                startActivity(intent);
             }
         });
 
@@ -62,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Dinner Options", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent (MainActivity.this, DietScreen_Activity.class);
-                startActivity(intent);
+
             }
         });
     }
