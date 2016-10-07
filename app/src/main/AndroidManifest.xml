@@ -29,11 +29,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".Carbs_Acitivity"
-            android:label="@string/title_activity_carbs__acitivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".Breakfast_Activity1"
+            android:label="@string/title_activity_breakfast_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".BreakfastActivity"></activity>
     </application>
 
 </manifest>

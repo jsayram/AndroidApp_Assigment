@@ -14,7 +14,5 @@
     <string name="Carbohydrates">Carbohydrates</string>
     <string name="Vegetables">Vegetables</string>
     <string name="Favorite">Favorite</string>
-    <string name="title_activity_carbs__acitivity">Carbs_Acitivity</string>
-    <string name="recipe_c_textview">Recipe</string>
 
 </resources>
