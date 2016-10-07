@@ -29,10 +29,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Vegetables_Activity"
             android:label="@string/title_activity_vegetables_"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Protein_Activity"
+            android:label="@string/title_activity_protein_"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
