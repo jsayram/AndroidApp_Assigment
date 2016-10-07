@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.ViewHolder>{
 
-    ArrayList<Integer> foodList;
+    ArrayList<FoodIdenityHolder> foodList;
     private int currentPosition;
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
@@ -32,7 +32,7 @@ public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.View
         }
     }
 
-    public BreakfastAdapter(ArrayList<Integer> list){
+    public BreakfastAdapter(ArrayList<FoodIdenityHolder> list){
         foodList = list;
     }
 
@@ -46,7 +46,7 @@ public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.View
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         currentPosition =position;
-        holder.foodImage.setImageResource(foodList.get(position));
+        holder.foodImage.setImageResource(foodList.get(position).getImageID());
     }
 
     @Override

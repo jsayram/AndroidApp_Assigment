@@ -18,7 +18,7 @@ public class BreakfastActivity extends AppCompatActivity {
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView recyclerView;
-    ArrayList<Integer> foodPicList =new ArrayList<Integer>();
+    ArrayList<FoodIdenityHolder> foodPicList =new ArrayList<FoodIdenityHolder>();
 
 
     @Override
@@ -26,8 +26,10 @@ public class BreakfastActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breakfast);
         findViews();
-        foodPicList.add(R.drawable.deanalbum);
-        foodPicList.add(R.drawable.handsomeman);
+        FoodIdenityHolder foodIdenityHolder = new FoodIdenityHolder(R.drawable.deanalbum,R.string.protein);
+        FoodIdenityHolder foodIdenityHolder1 = new FoodIdenityHolder(R.drawable.handsomeman,R.string.Favorite);
+        foodPicList.add(foodIdenityHolder);
+        foodPicList.add(foodIdenityHolder1);
         setUpRecyclerView();
         setButtonClicker();
 
