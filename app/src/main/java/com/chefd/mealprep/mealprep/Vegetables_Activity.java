@@ -9,6 +9,8 @@ import android.view.View;
 
 public class Vegetables_Activity extends AppCompatActivity {
 
+    private FoodIdenityHolder foodIdenityHolder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +18,10 @@ public class Vegetables_Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Bundle bundle = getIntent().getExtras();
+        foodIdenityHolder = new FoodIdenityHolder(bundle.getInt("currentMealImage"),bundle.getInt("currentMealString"));
+        //so quan here just find both the views for the activity and then just use the setimageResource,and setText for both the text
+        //and image view just look suggestions and the choose the right one
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

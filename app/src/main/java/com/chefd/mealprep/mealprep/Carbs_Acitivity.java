@@ -15,7 +15,8 @@ public class Carbs_Acitivity extends AppCompatActivity {
         setContentView(R.layout.activity_carbs__acitivity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //so Brain here just find both the views for the activity and then just use the setimageResource,and setText for both the text
+        //and image view just look suggestions and the choose the right one
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

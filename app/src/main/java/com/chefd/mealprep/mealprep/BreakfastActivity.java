@@ -1,5 +1,6 @@
 package com.chefd.mealprep.mealprep;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,15 +16,15 @@ import java.util.ArrayList;
 public class BreakfastActivity extends AppCompatActivity {
 
     private Button favoriteButton,carbohydrateButton,proteinButton,vegetablesButton;
-    RecyclerView.Adapter adapter;
+    BreakfastAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView recyclerView;
-    ArrayList<FoodIdenityHolder> foodPicList =new ArrayList<FoodIdenityHolder>();
+    public ArrayList<FoodIdenityHolder> foodPicList = new ArrayList<FoodIdenityHolder>();
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breakfast);
         findViews();
         FoodIdenityHolder foodIdenityHolder = new FoodIdenityHolder(R.drawable.deanalbum,R.string.protein);
@@ -58,6 +59,36 @@ public class BreakfastActivity extends AppCompatActivity {
                 recyclerView.scrollTo(adapter.getItemCount(),adapter.getItemCount()+1);
             }
         });
+
+        carbohydrateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BreakfastActivity.this,Vegetables_Activity.class);
+                intent.putExtra("currentMealImage",getCurrentInfo().getImageID());
+                intent.putExtra("currentMealString",getCurrentInfo().getStringID());
+                startActivity(intent);
+            }
+        });
+
+        proteinButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BreakfastActivity.this,Vegetables_Activity.class);
+                intent.putExtra("currentMealImage",getCurrentInfo().getImageID());
+                intent.putExtra("currentMealString",getCurrentInfo().getStringID());
+                startActivity(intent);
+            }
+        });
+
+        vegetablesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BreakfastActivity.this,Vegetables_Activity.class);
+                intent.putExtra("currentMealImage",getCurrentInfo().getImageID());
+                intent.putExtra("currentMealString",getCurrentInfo().getStringID());
+                startActivity(intent);
+            }
+        });
     }
 
     private void findViews() {
@@ -65,6 +96,11 @@ public class BreakfastActivity extends AppCompatActivity {
         carbohydrateButton = (Button) findViewById(R.id.carbohydrate);
         proteinButton = (Button) findViewById(R.id.protein);
         vegetablesButton = (Button) findViewById(R.id.vegetables);
+    }
+
+    public FoodIdenityHolder getCurrentInfo(){
+        FoodIdenityHolder foodIdenityHolder = new FoodIdenityHolder(foodPicList.get(adapter.getPosition()).getImageID(),foodPicList.get(adapter.getPosition()).getStringID());
+        return  foodIdenityHolder;
     }
 
 }
