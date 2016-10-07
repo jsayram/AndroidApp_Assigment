@@ -37,7 +37,7 @@ public class BreakfastActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         adapter = new BreakfastAdapter(foodPicList);
         recyclerView.setAdapter(adapter);
-        layoutManager = new LinearLayoutManager(this);
+        layoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(layoutManager);
     }
 
