@@ -34,8 +34,13 @@
         android:label="@string/title_activity_breakfast_1"
         android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".Vegetables_Activity"
-            android:label="@string/title_activity_vegetables_"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".Protein_Activity">
+        </activity>
+        <activity
+            android:name=".Carbs_Acitivity">
+        </activity>
+
+        <activity
+            android:name=".Vegetables_Activity"></activity>
     </application>
 </manifest>

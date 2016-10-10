@@ -13,25 +13,34 @@
     tools:context="com.chefd.mealprep.mealprep.Protein_Activity"
     tools:showIn="@layout/activity_protein_">
 
+    <TextView
+        android:textColor="@color/lightBlue"
+        android:textStyle="normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/protein"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editText"
+        android:gravity="center"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/twoeggs"
-        android:id="@+id/imageView2"
-        android:layout_above="@+id/recipe_p_textview"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="78dp" />
+        android:layout_marginTop="59dp"
+        android:id="@+id/protein_image"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="@string/recipe_p_textview"
+        android:text="@string/banana_pancakes_proteins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="134dp"
-        android:layout_marginStart="134dp"
-        android:layout_marginBottom="150dp"
-        android:id="@+id/recipe_p_textview" />
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="91dp"
+        android:id="@+id/protein_recipe" />
 </RelativeLayout>

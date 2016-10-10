@@ -14,22 +14,33 @@
     tools:showIn="@layout/activity_vegetables_">
 
     <TextView
-        android:text="@string/recipe_v_textview"
+        android:textColor="@color/lightBlue"
+        android:textStyle="normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/Vegetables"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/vegetables_title"
+        android:gravity="center"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <TextView
+        android:text="@string/banana_pancakes_veg_fruits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="118dp"
-        android:id="@+id/Vegetable_Textview" />
+        android:layout_marginBottom="91dp"
+        android:id="@+id/carbohydrates_textview" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/handsomeman"
-        android:layout_marginTop="79dp"
-        android:id="@+id/imageView_v1"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/Vegetable_Textview"
-        android:layout_alignEnd="@+id/Vegetable_Textview" />
-
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="59dp"
+    android:id="@+id/vegetables_Image"
+    android:layout_below="@+id/editText"
+    android:layout_centerHorizontal="true" />
 </RelativeLayout>

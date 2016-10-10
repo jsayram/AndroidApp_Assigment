@@ -12,13 +12,17 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="protein">protein</string>
     <string name="Carbohydrates">Carbohydrates</string>
-    <string name="Vegetables">Vegetables</string>
+    <string name="Vegetables">Vegetables/Fruit</string>
     <string name="Favorite">Favorite</string>
     <string name="title_activity_vegetables_">Vegetables_Activity</string>
-    <string name="recipe_v_textview">New things</string>
+    <string name="title_activity_protein_">Vegetables_Activity</string>
+    <string name="title_activity_carbs_">Vegetables_Activity</string>
+    <string name="recipe_v_textview">recipe sentence</string>
     <string name="recipe_p_textview">recipe sentence</string>
     <string name="recipe_c_textview">recipe sentence</string>
-    <string name="words_things">words things</string>
-
+    <string name="banana_pancakes">Banana Pancakes</string>
+    <string name="banana_pancakes_proteins">Ingredients: Two Eggs \n\n Instructions: Two Eggs, In a pan, crack two eggs and scramble them until fluffy. Add to dish when finished.</string>
+    <string name="banana_pancakes_veg_fruits">Ingredients: Bananas \n\n Instructions: Peel banana, then cut them 1/2inch slices, then add to dish. </string>
+    <string name="banana_pancakes_carbs">Ingredients: 1 cup all-purpose flour, 1 tablespoon white sugar, 2 teaspoons baking powder, 1/4 teaspoon salt, 1 egg, beaten, 1 cup milk, 2 tablespoons vegetable oil, 2 ripe bananas, mashed. \n \nInstructions: Combine flour, white sugar, baking powder and salt. In a separate bowl, mix together egg, milk, vegetable oil and bananas.Stir flour mixture into banana mixture; batter will be slightly lumpy. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Cook until pancakes are golden brown on both sides; serve hot.</string>
 
 </resources>
