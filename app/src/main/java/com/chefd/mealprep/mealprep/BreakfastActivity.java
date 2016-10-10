@@ -28,9 +28,9 @@ public class BreakfastActivity extends AppCompatActivity {
         setContentView(R.layout.activity_breakfast);
         findViews();
         FoodIdenityHolder foodIdenityHolder = new FoodIdenityHolder(R.drawable.deanalbum,R.string.protein);
-        FoodIdenityHolder foodIdenityHolder1 = new FoodIdenityHolder(R.drawable.handsomeman,R.string.Favorite);
+        //FoodIdenityHolder foodIdenityHolder1 = new FoodIdenityHolder(R.drawable.handsomeman,R.string.Favorite);
         foodPicList.add(foodIdenityHolder);
-        foodPicList.add(foodIdenityHolder1);
+        //foodPicList.add(foodIdenityHolder1);
         setUpRecyclerView();
         setButtonClicker();
 
@@ -64,8 +64,8 @@ public class BreakfastActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BreakfastActivity.this,Vegetables_Activity.class);
-                intent.putExtra("currentMealImage",getCurrentInfo().getImageID());
-                intent.putExtra("currentMealString",getCurrentInfo().getStringID());
+                //intent.putExtra("currentMealImage",getCurrentInfo().getImageID());
+                //intent.putExtra("currentMealString",getCurrentInfo().getStringID());
                 startActivity(intent);
             }
         });

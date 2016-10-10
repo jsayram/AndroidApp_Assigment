@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 
 public class Vegetables_Activity extends AppCompatActivity {
 
@@ -14,12 +15,13 @@ public class Vegetables_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vegetables_);
+        setContentView(R.layout.activity_protein_);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         Bundle bundle = getIntent().getExtras();
         foodIdenityHolder = new FoodIdenityHolder(bundle.getInt("currentMealImage"),bundle.getInt("currentMealString"));
+
         //so quan here just find both the views for the activity and then just use the setimageResource,and setText for both the text
         //and image view just look suggestions and the choose the right one
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

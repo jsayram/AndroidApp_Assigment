@@ -13,32 +13,25 @@
     tools:context="com.chefd.mealprep.mealprep.Protein_Activity"
     tools:showIn="@layout/activity_protein_">
 
-    <TextView
-        android:text="Protein"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/recipe_p_textview"
-        android:layout_marginTop="29dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="2 EGGS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="105dp"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignLeft="@+id/recipe_p_textview"
-        android:layout_alignStart="@+id/recipe_p_textview" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/twoeggs"
         android:id="@+id/imageView2"
-        android:layout_marginTop="59dp"
-        android:layout_below="@+id/recipe_p_textview"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/recipe_p_textview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="78dp" />
+
+    <TextView
+        android:text="@string/recipe_p_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="134dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginBottom="150dp"
+        android:id="@+id/recipe_p_textview" />
 
 </RelativeLayout>
