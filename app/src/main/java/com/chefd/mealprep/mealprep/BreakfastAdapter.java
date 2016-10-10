@@ -13,9 +13,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by artisja on 10/5/2016.
- */
+
 
 public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.ViewHolder>{
 
@@ -45,16 +43,18 @@ public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.View
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        currentPosition =position;
+        currentPosition = position;
         holder.foodImage.setImageResource(foodList.get(position));
     }
 
     @Override
     public int getItemCount() {
+
         return foodList.size();
     }
 
     public int getPosition(){
+
         return currentPosition;
     }
 }

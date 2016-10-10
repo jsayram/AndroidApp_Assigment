@@ -33,7 +33,7 @@
             android:name=".Breakfast_Activity1"
             android:label="@string/title_activity_breakfast_1"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".BreakfastActivity"></activity>
+        <activity android:name=".BreakfastActivity" />
     </application>
 
 </manifest>
