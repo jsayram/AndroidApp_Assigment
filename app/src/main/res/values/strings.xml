@@ -14,6 +14,10 @@
     <string name="Carbohydrates">Carbohydrates</string>
     <string name="Vegetables">Vegetables</string>
     <string name="Favorite">Favorite</string>
-    <string name="title_activity_favorites_">Favorites_Activity</string>
+    <string name="title_activity_vegetables_">Vegetables_Activity</string>
+    <string name="recipe_v_textview">recipe sentence</string>
+    <string name="recipe_p_textview">recipe sentence</string>
+    <string name="recipe_c_textview">recipe sentence</string>
+
 
 </resources>

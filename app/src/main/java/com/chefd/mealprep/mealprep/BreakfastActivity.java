@@ -1,5 +1,6 @@
 package com.chefd.mealprep.mealprep;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,19 +16,21 @@ import java.util.ArrayList;
 public class BreakfastActivity extends AppCompatActivity {
 
     private Button favoriteButton,carbohydrateButton,proteinButton,vegetablesButton;
-    RecyclerView.Adapter adapter;
+    BreakfastAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView recyclerView;
-    ArrayList<Integer> foodPicList =new ArrayList<Integer>();
+    public ArrayList<FoodIdenityHolder> foodPicList = new ArrayList<FoodIdenityHolder>();
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breakfast);
         findViews();
-        foodPicList.add(R.drawable.deanalbum);
-        foodPicList.add(R.drawable.handsomeman);
+        FoodIdenityHolder foodIdenityHolder = new FoodIdenityHolder(R.drawable.deanalbum,R.string.protein);
+        FoodIdenityHolder foodIdenityHolder1 = new FoodIdenityHolder(R.drawable.handsomeman,R.string.Favorite);
+        foodPicList.add(foodIdenityHolder);
+        foodPicList.add(foodIdenityHolder1);
         setUpRecyclerView();
         setButtonClicker();
 
@@ -37,7 +40,7 @@ public class BreakfastActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         adapter = new BreakfastAdapter(foodPicList);
         recyclerView.setAdapter(adapter);
-        layoutManager = new LinearLayoutManager(this);
+        layoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(layoutManager);
     }
 
@@ -56,6 +59,36 @@ public class BreakfastActivity extends AppCompatActivity {
                 recyclerView.scrollTo(adapter.getItemCount(),adapter.getItemCount()+1);
             }
         });
+
+        carbohydrateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BreakfastActivity.this,Vegetables_Activity.class);
+                intent.putExtra("currentMealImage",getCurrentInfo().getImageID());
+                intent.putExtra("currentMealString",getCurrentInfo().getStringID());
+                startActivity(intent);
+            }
+        });
+
+        proteinButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BreakfastActivity.this,Vegetables_Activity.class);
+                intent.putExtra("currentMealImage",getCurrentInfo().getImageID());
+                intent.putExtra("currentMealString",getCurrentInfo().getStringID());
+                startActivity(intent);
+            }
+        });
+
+        vegetablesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BreakfastActivity.this,Vegetables_Activity.class);
+                intent.putExtra("currentMealImage",getCurrentInfo().getImageID());
+                intent.putExtra("currentMealString",getCurrentInfo().getStringID());
+                startActivity(intent);
+            }
+        });
     }
 
     private void findViews() {
@@ -63,6 +96,11 @@ public class BreakfastActivity extends AppCompatActivity {
         carbohydrateButton = (Button) findViewById(R.id.carbohydrate);
         proteinButton = (Button) findViewById(R.id.protein);
         vegetablesButton = (Button) findViewById(R.id.vegetables);
+    }
+
+    public FoodIdenityHolder getCurrentInfo(){
+        FoodIdenityHolder foodIdenityHolder = new FoodIdenityHolder(foodPicList.get(adapter.getPosition()).getImageID(),foodPicList.get(adapter.getPosition()).getStringID());
+        return  foodIdenityHolder;
     }
 
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_protein_"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.chefd.mealprep.mealprep.Protein_Activity"
+    tools:showIn="@layout/activity_protein_">
+
+    <TextView
+        android:text="Protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipe_p_textview"
+        android:layout_marginTop="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="2 EGGS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignLeft="@+id/recipe_p_textview"
+        android:layout_alignStart="@+id/recipe_p_textview" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/twoeggs"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/recipe_p_textview"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
