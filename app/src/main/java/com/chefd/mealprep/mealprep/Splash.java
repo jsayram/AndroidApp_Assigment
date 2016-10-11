@@ -15,7 +15,7 @@ public class Splash extends Activity {
         super.onCreate (savedInstanceState);
         setContentView(R.layout.splashh);
 
-        final ImageView iv= (ImageView) findViewById(R.id.imageView);
+        final ImageView iv= (ImageView) findViewById(R.id.splashPicture);
         final Animation an= AnimationUtils.loadAnimation(getBaseContext(),R.anim.rotate);
 
         iv.startAnimation(an);

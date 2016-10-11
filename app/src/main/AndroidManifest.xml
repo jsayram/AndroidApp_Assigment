@@ -30,9 +30,9 @@
             </intent-filter>
         </activity>
         <activity
-        android:name=".BreakfastActivity"
-        android:label="@string/title_activity_breakfast_1"
-        android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".BreakfastActivity"
+            android:label="@string/title_activity_breakfast"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Protein_Activity">
         </activity>
