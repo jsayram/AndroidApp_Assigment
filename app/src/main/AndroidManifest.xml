@@ -19,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DietScreen_Activity"
-            android:label="@string/title_activity_diet_screen_"
+            android:name=".BMI_Calculator_Activity"
+            android:label="@string/title_activity_bmi_screen_"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Splash">
             <intent-filter>

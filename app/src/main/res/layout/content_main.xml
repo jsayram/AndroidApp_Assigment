@@ -17,13 +17,17 @@
         android:text="@string/OverHeadMainScreenText"
         android:textSize="50sp"
         android:gravity="center"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/title_home_screen"
-        android:gravity="center">
-    <Button android:id="@+id/breakfast"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button android:id="@+id/breakfast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/MainTopButton"
@@ -42,5 +46,13 @@
         android:text="@string/MainBottomButton"
         android:textColor="@color/wordColor"
         android:layout_below="@+id/lunch"/>
+
+        <Button
+            android:text="@string/bmi_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/BMI_Button"
+            app:layout_anchorGravity="center_vertical|left"
+            android:layout_gravity="bottom|center_horizontal" />
     </LinearLayout>
 </RelativeLayout>

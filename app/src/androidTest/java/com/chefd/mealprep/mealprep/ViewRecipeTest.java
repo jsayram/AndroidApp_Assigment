@@ -25,7 +25,10 @@ public class ViewRecipeTest {
     @Rule
     public ActivityTestRule<BreakfastActivity> mActivityRule = new ActivityTestRule(BreakfastActivity.class);
 
-    @Test
+    @Test  /* Given the user is viewing a meal
+              When the user presses the carbohydrate button
+              Then the user will see a carbohydrate recipe  */
+
     public void CheckCarbohydrateRecipe(){
         //find button on current activity.
         onView(withId(R.id.carbohydrate)).check(matches(isDisplayed()));

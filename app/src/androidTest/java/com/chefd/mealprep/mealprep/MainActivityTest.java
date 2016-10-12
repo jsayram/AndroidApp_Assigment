@@ -27,12 +27,16 @@ public class MainActivityTest {
     @Rule
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule(MainActivity.class);
 
-    @Test
+    @Test   /*Given the user is on the main activity
+When the user press the breakfast button
+Then the user will see a breakfast meal*/
     public void CheckBreakfastButton(){
-        //find button on current activity.
+        //given Im in the current activity
         onView(withId(R.id.breakfast)).check(matches(isDisplayed()));
-        //  press the button on current activity
+        // when press the button breakfast button
         onView(withId(R.id.breakfast)).perform(click());
+
+        // This make sure that the recycler view is vissible with current item
         // This is a different activity no need to tell espresso , check what should be showing
         onView(withId(R.id.recycler_view)).check(matches(isDisplayed()));
     }

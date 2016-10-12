@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private TextView titleTextView;
-    private Button breakfastButton,lunchButton,dinnerButton;
+    private Button breakfastButton,lunchButton,dinnerButton,BMI_Button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        BMI_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,BMI_Calculator_Activity.class);
+                startActivity(intent);
 
+            }
+        });
         lunchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         breakfastButton = (Button) findViewById(R.id.breakfast);
         lunchButton = (Button) findViewById(R.id.lunch);
         dinnerButton = (Button) findViewById(R.id.dinner);
-
+        BMI_Button = (Button) findViewById(R.id.BMI_Button);
     }
 
     @Override
