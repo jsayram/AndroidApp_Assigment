@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.chefd.mealprep.mealprep.BMI_Calculator_Activity"
-    tools:showIn="@layout/activity_bmi_screen">
+    tools:showIn="@layout/activity_bmi_display">
 
     <ImageView
         android:layout_width="wrap_content"
