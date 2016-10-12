@@ -1,41 +1,54 @@
 # StoryBoards
-# Project Uploaded Correctly (9/26/1016)
-(Using Android Studio 2.2) 
--Ready to be edited with (MainActivity) and one aditional Activity (DietScreen_Activity)
+# Project Uploaded Correctly (9/26/2016)
+(Using Android Studio 2.2)
+-Ready to be edited with (MainActivity) and one additional Activity (BMI_Activity)
 
 (Team Side notes): When editing in Android Studio , make sure to view project in Android View This will show all relevant App files that will be for editing.
 
 (Team Side notes): Uploaded an activity life cycle flow chart, shows the methods used for each activity
 
-- (9/27/016) Added Splash Screen (Screen before main activity) as a background image 720x1280, Included rotation animation, background process that holds the screen 2 seconds.
- Synopsis
+- (9/27/2016) Added Splash Screen (Screen before main activity) as a background image 720x1280, Included rotation animation, background process that holds the screen 2 seconds.
 
-At the top of the file there should be a short introduction and/ or overview that explains what the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
-Code Example
+This application (MealPrep) helps users to decide on what meal they want to prep and how to prep the
+meal they desire.
 
-Show what the library does as concisely as possible, developers should be able to figure out how your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+# First Iteration(10/12/2016):
 
-Motivation
+We have chosen to implement these for our first iteration; it defines the main purpose
+of our application. The three user stories implemented are displayed below:
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
+# Feature Name: Breakfast
 
-Installation
+		As an early bird
+		So that I can search for an appropriate meal
+		I want to eat according to what time of the day it is
 
-Provide code examples and explanations of how to get the project.
 
-API Reference
+One breakfast meal is added to the application where a user can view a picture of the full
+breakfast meal.
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+# Feature Name: View Recipe
 
-Tests
+		As a Cook
+		So that I know what is needed to meal prep
+		I want to see recipes as needed
 
-Describe and show how to run the tests with code examples.
+Users can view the ingredients for that meal separated into 3 portions: carbohydrates, protein,
+and vegetables/fruit.
 
-Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+# Feature Name: BMI Calculator
 
-License
+		As a Bodybuilder
+		So that I can be ready for competition
+		I want to see the a BMI chart
 
-A short snippet describing the license (MIT, Apache, etc.)
+Users can view the Body Mass Index (BMI) chart showing the average BMI based on age, height, and
+weight.
+
+Testing the welcome screen was difficult because it was hard to determine if the welcome screen has
+a 2-second animation. Once the welcome screen is viewed, the animation shortly fades to the main
+activity displaying breakfast, lunch, and dinner.
+
+Staying agile helped us make changes to improve our application.
