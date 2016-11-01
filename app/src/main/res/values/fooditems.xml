@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="fooditems">
+            <item>Chicken Leg</item>
+            <item>Sweet Potato</item>
+            <item>1/4 Brown Rice</item>
+            <item>Pineapple</item>
+            <item>apple</item>
+            <item>Peaches</item>
+            <item>Tuna</item>
+            <item>Salmon</item>
+            <item>Slice of Pizza</item>
+            <item>Stake</item>
+            <item>Pork</item>
+            <item>Broccoli</item>
+        </string-array>
+</resources>

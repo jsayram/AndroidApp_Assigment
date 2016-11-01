@@ -33,14 +33,18 @@
             android:name=".BreakfastActivity"
             android:label="@string/title_activity_breakfast"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Protein_Activity" />
+        <activity android:name=".Carbs_Acitivity" />
+        <activity android:name=".Vegetables_Activity" />
         <activity
-            android:name=".Protein_Activity">
+            android:name=".CaloriesActivity"
+            android:label="@string/title_activity_calories"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chefd.mealprep.mealprep.MainActivity" />
         </activity>
-        <activity
-            android:name=".Carbs_Acitivity">
-        </activity>
-
-        <activity
-            android:name=".Vegetables_Activity"></activity>
     </application>
+
 </manifest>

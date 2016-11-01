@@ -25,5 +25,36 @@
     <string name="banana_pancakes_veg_fruits">Ingredients: Bananas \n\n Instructions: Peel banana, then cut them 1/2inch slices, then add to dish. </string>
     <string name="banana_pancakes_carbs">Ingredients: 1 cup all-purpose flour, 1 tablespoon white sugar, 2 teaspoons baking powder, 1/4 teaspoon salt, 1 egg, beaten, 1 cup milk, 2 tablespoons vegetable oil, 2 ripe bananas, mashed. \n \nInstructions: Combine flour, white sugar, baking powder and salt. In a separate bowl, mix together egg, milk, vegetable oil and bananas.Stir flour mixture into banana mixture; batter will be slightly lumpy. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Cook until pancakes are golden brown on both sides; serve hot.</string>
     <string name="bmi_calculator">BMI Calculator</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="about_text">This company was founded in 2016 at some alloted time.
+                              The reason im writing this much is so that i can see if the text
+                              view and scroll view are working together and that the scroll view
+                              is able to scroll. So what im going to do now is copy and pase what
+                              i just wrote. Please disregard the following text because you have
+                              already read it.This company was founded in 2016 at some alloted
+                               time. The reason im writing this much is so that i can see if the
+                               text view and scroll view are working together and that the scroll
+                               view is able to scroll. So what im going to do now is copy and pase
+                               what i just wrote. Please disregard the following text because you
+                                have already read it.This company was founded in 2016 at some
+                               alloted time. The reason im writing this much is so that i can see
+                               if the text view and scroll view are working together and that the
+                               scroll view is able to scroll. So what im going to do now is copy
+                               and pase what i just wrote. Please disregard the following text
+                               because you have already read it. This company was founded in 2016 at
+                               some alloted time. The reason im writing this
+                            much is so that i can see if the text view and scroll
+                            view are working together and that the scroll view is able
+                            to scroll. So what im going to do now is copy and pase what i
+                            just wrote. Please disregard the following text because you have
+                            already read it.This company was founded in 2016 at some alloted time.
+                            The reason im writing this much is so that i can see if the text view
+                            and scroll view are working together and that the scroll view is able
+                            to scroll. So what im going to do now is copy and pase what i just wrote.
+                            Please disregard the following text because you have already read it.This
+                            company was founded in 2016 at some alloted time. The reason im writing
+                            this much is so that i can see if the text view and scroll view are
+                            working together and that the scroll view is able to scroll.</string>
+    <string name="title_activity_calories">CaloriesActivity</string>
 
 </resources>

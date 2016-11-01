@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private TextView titleTextView;
-    private Button breakfastButton,lunchButton,dinnerButton,BMI_Button;
+    private Button breakfastButton,lunchButton,dinnerButton,BMI_Button, CalorieButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         findViewsContentMain();
         setUpContentMainButtons();
-
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +68,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        CalorieButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,CaloriesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     private void findViewsContentMain() {
@@ -79,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         lunchButton = (Button) findViewById(R.id.lunch);
         dinnerButton = (Button) findViewById(R.id.dinner);
         BMI_Button = (Button) findViewById(R.id.BMI_Button);
+        CalorieButton = (Button) findViewById(R.id.CalorieButton);
     }
 
     @Override
