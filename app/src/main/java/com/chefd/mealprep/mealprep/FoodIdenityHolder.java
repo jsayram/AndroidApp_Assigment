@@ -6,29 +6,29 @@ package com.chefd.mealprep.mealprep;
 
 public class FoodIdenityHolder {
 
-    private Integer stringID;
-    private Integer imageID;
+    private Integer stringId;
+    private Integer imageId;
 
-    public FoodIdenityHolder(Integer image,Integer string){
-        imageID=image;
-        stringID=string;
-    }
-//Accessors
-
-    public Integer getStringID() {
-        return stringID;
+    public FoodIdenityHolder(Integer image,Integer string) {
+        imageId = image;
+        stringId = string;
     }
 
-    public Integer getImageID() {
-        return imageID;
+    //Accessors
+    public Integer getStringId() {
+        return stringId;
     }
 
-//Mutators
-    public void setStringID(Integer stringID) {
-        this.stringID = stringID;
+    public Integer getImageId() {
+        return imageId;
     }
 
-    public void setImageID(Integer imageID) {
-        this.imageID = imageID;
+    //Mutators
+    public void setStringId(Integer stringId) {
+        this.stringId = stringId;
+    }
+
+    public void setImageId(Integer imageId) {
+        this.imageId = imageId;
     }
 }

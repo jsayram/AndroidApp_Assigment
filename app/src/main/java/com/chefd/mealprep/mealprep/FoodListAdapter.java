@@ -33,13 +33,13 @@ public class FoodListAdapter extends ArrayAdapter<FoodProduct> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).
-                    inflate(R.layout.listitem, parent, false);
+            convertView = LayoutInflater.from(getContext())
+                    .inflate(R.layout.listitem, parent, false);
         }
         FoodProduct food = foods.get(position);
 
         //gets the name of the food
-        TextView nameText= (TextView) convertView.findViewById(R.id.nameText);
+        TextView nameText = (TextView) convertView.findViewById(R.id.nameText);
         nameText.setText(food.getName());
 
         // gets the amount of calories for food
@@ -59,14 +59,12 @@ public class FoodListAdapter extends ArrayAdapter<FoodProduct> {
     private Bitmap getBitmapFromAsset(String foodId) {
         AssetManager assetManager = getContext().getAssets();
         InputStream stream = null;
-
         try {
             stream = assetManager.open(foodId + ".png");
             return BitmapFactory.decodeStream(stream);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException error) {
+            error.printStackTrace();
             return null;
         }
     }
-
 }

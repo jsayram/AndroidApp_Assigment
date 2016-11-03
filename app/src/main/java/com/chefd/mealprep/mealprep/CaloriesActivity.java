@@ -28,6 +28,7 @@ public class CaloriesActivity extends AppCompatActivity {
 
         //creates the food adapter that holds each of the food items
         FoodListAdapter adapter = new FoodListAdapter(
+                // custom layout for each of the food items in the listview of the calorieActivity
                 this, R.layout.listitem,foods);
         ListView lv = (ListView) findViewById(R.id.listView);
         lv.setAdapter(adapter);

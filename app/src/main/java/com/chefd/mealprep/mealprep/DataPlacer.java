@@ -10,8 +10,8 @@ import java.util.Map;
  */
 
 public class DataPlacer {
-        public static List<FoodProduct> foodProductList = new ArrayList<>();
-        public static Map<String,FoodProduct> foodProductMap = new HashMap<>();
+    public static List<FoodProduct> foodProductList = new ArrayList<>();
+    public static Map<String, FoodProduct> foodProductMap = new HashMap<>();
 
 
     // the follwoing food ids ie. food1, food2, food3, etc ...correspond to the images in the
@@ -78,8 +78,8 @@ public class DataPlacer {
     }
 
     private static void addProduct(String itemId, String name,
-                                   String description, int CalorieNumber) {
-        FoodProduct item = new FoodProduct(itemId,name,description, CalorieNumber );
+                                   String description, int calorieNumber) {
+        FoodProduct item = new FoodProduct(itemId, name, description, calorieNumber);
         foodProductList.add(item);
         foodProductMap.put(itemId, item);
     }

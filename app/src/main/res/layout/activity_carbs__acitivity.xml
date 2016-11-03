@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.chefd.mealprep.mealprep.Carbs_Acitivity">
+    tools:context="com.chefd.mealprep.mealprep.CarbsAcitivity">
 
 
     <include layout="@layout/content_carbs__acitivity" />

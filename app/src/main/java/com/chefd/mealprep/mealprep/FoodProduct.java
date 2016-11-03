@@ -20,16 +20,17 @@ public class FoodProduct {
     }
 
     public String getDescription() {
-        return description +"\n";
+        return description + "\n";
     }
 
     public int getCalorieNumber() {
         return calorieNumber;
     }
-    public FoodProduct(String foodId,String name, String description, int calorieNumber){
+
+    public FoodProduct(String foodId, String name, String description, int calorieNumber) {
         this.foodId = foodId;
         this.name = name;
-        this.description =description;
+        this.description = description;
         this.calorieNumber = calorieNumber;
     }
 }

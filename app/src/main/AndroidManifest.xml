@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BMI_Calculator_Activity"
+            android:name=".BmiCalculatorActivity"
             android:label="@string/title_activity_bmi_screen_"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Splash">
@@ -33,9 +33,9 @@
             android:name=".BreakfastActivity"
             android:label="@string/title_activity_breakfast"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Protein_Activity" />
-        <activity android:name=".Carbs_Acitivity" />
-        <activity android:name=".Vegetables_Activity" />
+        <activity android:name=".ProteinActivity" />
+        <activity android:name=".CarbsAcitivity" />
+        <activity android:name=".VegetablesActivity" />
         <activity
             android:name=".CaloriesActivity"
             android:label="@string/title_activity_calories"

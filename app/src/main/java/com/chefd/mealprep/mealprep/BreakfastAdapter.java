@@ -1,16 +1,11 @@
 package com.chefd.mealprep.mealprep;
 
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -18,36 +13,37 @@ import java.util.ArrayList;
  * Created by artisja on 10/5/2016.
  */
 
-public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.ViewHolder>{
+public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.ViewHolder> {
 
     ArrayList<FoodIdenityHolder> foodList;
     private int currentPosition;
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private ImageButton foodImage;
 
-        public ViewHolder(LinearLayout imageView){
+        public ViewHolder(LinearLayout imageView) {
             super(imageView);
             foodImage = (ImageButton) imageView.findViewById(R.id.food_swipe_image);
         }
     }
 
-    public BreakfastAdapter(ArrayList<FoodIdenityHolder> list){
+    public BreakfastAdapter(ArrayList<FoodIdenityHolder> list) {
         foodList = list;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_swipe,parent,false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.food_swipe,parent,false);
         ViewHolder viewHolder = new ViewHolder((LinearLayout)view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        currentPosition =position;
-        holder.foodImage.setImageResource(foodList.get(position).getImageID());
+        currentPosition = position;
+        holder.foodImage.setImageResource(foodList.get(position).getImageId());
     }
 
     @Override
@@ -55,7 +51,7 @@ public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.View
         return foodList.size();
     }
 
-    public int getPosition(){
+    public int getPosition() {
         return currentPosition;
     }
 }

@@ -1,12 +1,10 @@
 package com.chefd.mealprep.mealprep;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +14,10 @@ import java.util.ArrayList;
 
 public class BreakfastActivity extends AppCompatActivity {
 
-    private Button favoriteButton,carbohydrateButton,proteinButton,vegetablesButton;
+    private Button favoriteButton;
+    private Button carbohydrateButton;
+    private Button proteinButton;
+    private Button vegetablesButton;
     BreakfastAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView recyclerView;
@@ -24,24 +25,25 @@ public class BreakfastActivity extends AppCompatActivity {
     public ArrayList<FoodIdenityHolder> foodPicList = new ArrayList<FoodIdenityHolder>();
 
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breakfast);
         findViews();
-        FoodIdenityHolder foodIdenityHolder = new FoodIdenityHolder(R.drawable.pancakes,R.string.banana_pancakes);
+        FoodIdenityHolder foodIdenityHolder =
+                new FoodIdenityHolder(R.drawable.pancakes,R.string.banana_pancakes);
         foodPicList.add(foodIdenityHolder);
-            setUpRecyclerView();
+        setUpRecyclerView();
         setButtonClicker();
-            mealTitleText.setText(getCurrentInfo().getStringID());
+        mealTitleText.setText(getCurrentInfo().getStringId());
 
-        }
+    }
 
-    private void setUpRecyclerView(){
+    private void setUpRecyclerView() {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         adapter = new BreakfastAdapter(foodPicList);
         recyclerView.setAdapter(adapter);
-        layoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
     }
 
@@ -49,47 +51,54 @@ public class BreakfastActivity extends AppCompatActivity {
         favoriteButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"send favorite click to favorite activity",Toast.LENGTH_LONG);
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),
+                        "send favorite click to favorite activity",Toast.LENGTH_LONG);
             }
         });
 
         recyclerView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                recyclerView.scrollTo(adapter.getItemCount(),adapter.getItemCount()+1);
+            public void onClick(View view) {
+                recyclerView.scrollTo(adapter.getItemCount(), adapter.getItemCount() + 1);
             }
         });
 
         carbohydrateButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                FoodIdenityHolder foodIdenityCarbs = new FoodIdenityHolder(R.drawable.carbs_pancakes,R.string.banana_pancakes_carbs);
-                Intent intent = new Intent(BreakfastActivity.this,Carbs_Acitivity.class);
-                intent.putExtra("currentMealImage",foodIdenityCarbs.getImageID());
-                intent.putExtra("currentMealString",foodIdenityCarbs.getStringID());
+            public void onClick(View view) {
+                FoodIdenityHolder foodIdenityCarbs =
+                        new FoodIdenityHolder(R.drawable.carbs_pancakes,
+                                R.string.banana_pancakes_carbs);
+                Intent intent = new Intent(BreakfastActivity.this, CarbsAcitivity.class);
+                intent.putExtra("currentMealImage", foodIdenityCarbs.getImageId());
+                intent.putExtra("currentMealString", foodIdenityCarbs.getStringId());
                 startActivity(intent);
             }
         });
 
         proteinButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                FoodIdenityHolder foodIdenityProtein = new FoodIdenityHolder(R.drawable.twoeggs,R.string.banana_pancakes_proteins);
-                Intent intent = new Intent(BreakfastActivity.this,Protein_Activity.class);
-                intent.putExtra("currentMealImage",foodIdenityProtein.getImageID());
-                intent.putExtra("currentMealString",foodIdenityProtein.getStringID());
+            public void onClick(View view) {
+                FoodIdenityHolder foodIdenityProtein =
+                        new FoodIdenityHolder(R.drawable.twoeggs,
+                                R.string.banana_pancakes_proteins);
+                Intent intent = new Intent(BreakfastActivity.this, ProteinActivity.class);
+                intent.putExtra("currentMealImage", foodIdenityProtein.getImageId());
+                intent.putExtra("currentMealString", foodIdenityProtein.getStringId());
                 startActivity(intent);
             }
         });
 
         vegetablesButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                FoodIdenityHolder foodIdenityVeg = new FoodIdenityHolder(R.drawable.bananas,R.string.banana_pancakes_veg_fruits);
-                Intent intent = new Intent(BreakfastActivity.this,Vegetables_Activity.class);
-                intent.putExtra("currentMealImage",foodIdenityVeg.getImageID());
-                intent.putExtra("currentMealString",foodIdenityVeg.getStringID());
+            public void onClick(View view) {
+                FoodIdenityHolder foodIdenityVeg =
+                        new FoodIdenityHolder(R.drawable.bananas,
+                                R.string.banana_pancakes_veg_fruits);
+                Intent intent = new Intent(BreakfastActivity.this, VegetablesActivity.class);
+                intent.putExtra("currentMealImage", foodIdenityVeg.getImageId());
+                intent.putExtra("currentMealString", foodIdenityVeg.getStringId());
                 startActivity(intent);
             }
         });
@@ -104,9 +113,12 @@ public class BreakfastActivity extends AppCompatActivity {
 
     }
 
-    public FoodIdenityHolder getCurrentInfo(){
-        FoodIdenityHolder foodIdenityHolder = new FoodIdenityHolder(foodPicList.get(adapter.getPosition()).getImageID(),foodPicList.get(adapter.getPosition()).getStringID());
-        return  foodIdenityHolder;
+    public FoodIdenityHolder getCurrentInfo() {
+        FoodIdenityHolder foodIdenityHolder =
+                new FoodIdenityHolder(foodPicList.get(adapter.getPosition())
+                        .getImageId(), foodPicList.get(adapter.getPosition())
+                        .getStringId());
+        return foodIdenityHolder;
     }
 
 }

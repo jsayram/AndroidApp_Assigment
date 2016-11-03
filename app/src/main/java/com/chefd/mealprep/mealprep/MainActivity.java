@@ -6,9 +6,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +16,11 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private TextView titleTextView;
-    private Button breakfastButton,lunchButton,dinnerButton,BMI_Button, CalorieButton;
+    private Button breakfastButton;
+    private Button lunchButton;
+    private Button dinnerButton;
+    private Button bmiButton;
+    private Button calorieButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,37 +44,37 @@ public class MainActivity extends AppCompatActivity {
     private void setUpContentMainButtons() {
         breakfastButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,BreakfastActivity.class);
                 startActivity(intent);
 
             }
         });
-        BMI_Button.setOnClickListener(new View.OnClickListener() {
+        bmiButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,BMI_Calculator_Activity.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,BmiCalculatorActivity.class);
                 startActivity(intent);
 
             }
         });
         lunchButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Lunch Options", Toast.LENGTH_SHORT).show();
             }
         });
 
         dinnerButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Dinner Options", Toast.LENGTH_SHORT).show();
 
             }
         });
-        CalorieButton.setOnClickListener(new View.OnClickListener() {
+        calorieButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,CaloriesActivity.class);
                 startActivity(intent);
             }
@@ -85,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
         breakfastButton = (Button) findViewById(R.id.breakfast);
         lunchButton = (Button) findViewById(R.id.lunch);
         dinnerButton = (Button) findViewById(R.id.dinner);
-        BMI_Button = (Button) findViewById(R.id.BMI_Button);
-        CalorieButton = (Button) findViewById(R.id.CalorieButton);
+        bmiButton = (Button) findViewById(R.id.BMI_Button);
+        calorieButton = (Button) findViewById(R.id.CalorieButton);
     }
 
     @Override
