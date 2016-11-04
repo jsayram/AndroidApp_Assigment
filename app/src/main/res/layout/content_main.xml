@@ -35,7 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/MainTopButton"
-        android:textColor="@color/wordColor"/>
+        android:textColor="@color/wordColor"
+            android:layout_weight="0.02" />
 
     <Button android:id="@+id/lunch"
         android:layout_width="wrap_content"
@@ -64,6 +65,13 @@
             android:layout_width="184dp"
             android:layout_height="wrap_content"
             android:id="@+id/CalorieButton" />
+
+        <Button
+            android:id="@+id/Aboutme"
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:text="About me"
+            android:textColor="@color/wordColor" />
 
     </LinearLayout>
 
