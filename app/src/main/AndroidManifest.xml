@@ -48,6 +48,10 @@
         <activity
             android:name=".CalorieViewActivity"
             android:label="@string/title_activity_calorie_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".aboutme"
+            android:label="@string/title_activity_aboutme"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
