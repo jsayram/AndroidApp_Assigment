@@ -37,7 +37,7 @@
         <activity android:name=".CarbsAcitivity" />
         <activity android:name=".VegetablesActivity" />
         <activity
-            android:name=".CaloriesActivity"
+            android:name=".CaloriesCalculatorActivity"
             android:label="@string/title_activity_calories"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -45,6 +45,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.chefd.mealprep.mealprep.MainActivity" />
         </activity>
+        <activity
+            android:name=".CalorieViewActivity"
+            android:label="@string/title_activity_calorie_view"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -72,10 +72,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         calorieButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,CaloriesActivity.class);
+                Intent intent = new Intent(MainActivity.this,CaloriesCalculatorActivity.class);
                 startActivity(intent);
             }
         });

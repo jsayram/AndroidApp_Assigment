@@ -56,5 +56,8 @@
                             this much is so that i can see if the text view and scroll view are
                             working together and that the scroll view is able to scroll.</string>
     <string name="title_activity_calories">CaloriesActivity</string>
+    <string name="title_activity_calorie_view">CalorieViewActivity</string>
+    <string name="viewcalviewText">Go to Food Calorie List</string>
+    <string name="textbmrdescription">Basal metabolic rate (BMR), is the amount of energy expressed in calories that a person needs to keep the body functioning at rest. This amount of calories is HIGHLY recommended.</string>
 
 </resources>
