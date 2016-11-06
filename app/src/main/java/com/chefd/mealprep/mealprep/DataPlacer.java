@@ -27,24 +27,24 @@ public class DataPlacer {
                 100); // how many calories that specific food item is.
 
         addProduct("oats",
-                "Sweet Potato",
+                "Oats",
                 "This is a nice carb",
-                128);
+                100);
 
         addProduct("cinnamon",
-                "Brown Rice",
-                "Good Carb",
-                85);
+                "Cinnamon",
+                "Spices",
+                6);
 
         addProduct("greekyogurt",
-                "Pineapple",
-                "carbs for sweetness",
-                23);
+                "Greek Yogurt",
+                "Proteins and Probiotic",
+                80);
 
         addProduct("peanutbutter",
-                "Apple",
-                "Healthy apple",
-                26);
+                "PeanutButter",
+                "Good Fats",
+                94);
 
         addProduct("egg",
                 "Sunny side up egg",
