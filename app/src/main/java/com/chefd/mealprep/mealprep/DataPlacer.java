@@ -14,17 +14,17 @@ public class DataPlacer {
     public static Map<String, FoodProduct> foodProductMap = new HashMap<>();
 
 
-    // the follwoing food ids ie. food1, food2, food3, etc ...correspond to the images in the
+    // the following food ids ie. food1, food2, food3, etc ...correspond to the images in the
     // main-> assets as long as the image is a .png file just put the name of the image
     //replacing food1, food2, food3 etc... with the correspoding image name you wish
     //to replace it with.
 
 
     static {
-        addProduct("bananas",  // file name without .png extension OATS
-                "Chicken Leg",  // name of item
-                "Is made of chicken", // description of item
-                35); // how many calories that specific food item is.
+        addProduct("bananas",  // file name without .png extension
+                "Bananas",  // name of item
+                "Fresh Bananas", // description of item
+                100); // how many calories that specific food item is.
 
         addProduct("oats",
                 "Sweet Potato",
