@@ -46,35 +46,41 @@ public class DataPlacer {
                 "Healthy apple",
                 26);
 
-        addProduct("food6",
-                "Peach",
-                "Sweet Peach",
-                65);
+        addProduct("egg",
+                "Sunny side up egg",
+                "Good morning protein",
+                78);
 
-        addProduct("food7",
-                "Can of Tuna",
-                "Protein and fish oil",
-                38);
+        addProduct("mashedpotatoes",
+                "Mashed potatoes",
+                "Easy Carbs for Dinner",
+                88);
 
-        addProduct("food8",
-                "Salmon",
-                "Salmon from alaska good source of protein",
-                45);
+        addProduct("meatballs",
+                "Meatballs",
+                "Mix with spaghetti and Tomato sauce for a good Carb, protein and vegie mix",
+                197);
 
-        addProduct("food9",
-                "Pepperoni Pizza",
-                "Carbs and lil bit of protein ",
-                85);
+        addProduct("porkchops",
+                "Pork chops",
+                "Protein ",
+                206);
 
-        addProduct("food10",
-                "Steak",
-                "Protein Food",
-                35);
+        addProduct("spaghetti",
+                "Spaghetti",
+                "Mix with Meat balls and Tomato sauce for a good Carb, protein and vegie mix",
+                158);
 
-        addProduct("food11",
-                "Pork",
-                "Protein Food",
-                28);
+        addProduct("sweetcorn",
+                "Sweet corn",
+                "Vegtables",
+                77);
+
+        addProduct("tomatosauce",
+                "Tomato SAuce",
+                "Mix with Meat balls and Spaghetti for a good Carb, protein and vegie mix",
+                115);
+
     }
 
     private static void addProduct(String itemId, String name,
