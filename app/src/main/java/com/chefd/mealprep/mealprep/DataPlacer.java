@@ -21,27 +21,27 @@ public class DataPlacer {
 
 
     static {
-        addProduct("food1",  // file name without .png extension
+        addProduct("bananas",  // file name without .png extension OATS
                 "Chicken Leg",  // name of item
                 "Is made of chicken", // description of item
                 35); // how many calories that specific food item is.
 
-        addProduct("food2",
+        addProduct("oats",
                 "Sweet Potato",
                 "This is a nice carb",
                 128);
 
-        addProduct("food3",
+        addProduct("cinnamon",
                 "Brown Rice",
                 "Good Carb",
                 85);
 
-        addProduct("food4",
+        addProduct("greekyogurt",
                 "Pineapple",
                 "carbs for sweetness",
                 23);
 
-        addProduct("food5",
+        addProduct("peanutbutter",
                 "Apple",
                 "Healthy apple",
                 26);
