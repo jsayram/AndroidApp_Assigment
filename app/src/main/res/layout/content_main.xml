@@ -32,45 +32,43 @@
         android:layout_alignParentEnd="true">
 
         <Button android:id="@+id/breakfast"
-        android:layout_width="wrap_content"
+        android:layout_width="150sp"
         android:layout_height="wrap_content"
         android:text="@string/MainTopButton"
         android:textColor="@color/wordColor"
             android:layout_weight="0.02" />
 
     <Button android:id="@+id/lunch"
-        android:layout_width="wrap_content"
+        android:layout_width="150sp"
         android:layout_height="wrap_content"
         android:text="@string/MainMiddleButton"
         android:textColor="@color/wordColor"
         android:layout_below="@+id/breakfast"/>
 
     <Button android:id="@+id/dinner"
-        android:layout_width="wrap_content"
+        android:layout_width="150sp"
         android:layout_height="wrap_content"
         android:text="@string/MainBottomButton"
         android:textColor="@color/wordColor"
         android:layout_below="@+id/lunch"/>
 
-        <Button
+        <Button  android:id="@+id/BMI_Button"
             android:text="@string/bmi_calculator"
-            android:layout_width="193dp"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
-            android:id="@+id/BMI_Button"
             app:layout_anchorGravity="center_vertical|left"
             android:layout_gravity="bottom|center_horizontal" />
 
-        <Button
-            android:text="Calorie Calculator"
-            android:layout_width="184dp"
+        <Button  android:id="@+id/CalorieButton"
+            android:text="@string/calorie_counter_title"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
-            android:id="@+id/CalorieButton" />
+            />
 
-        <Button
-            android:id="@+id/Aboutme"
-            android:layout_width="224dp"
+        <Button  android:id="@+id/aboutme"
+            android:layout_width="150sp"
             android:layout_height="wrap_content"
-            android:text="About me"
+            android:text="@string/about_me_title"
             android:textColor="@color/wordColor" />
 
     </LinearLayout>

@@ -20,14 +20,6 @@
         android:orientation="vertical"
         android:layout_below="@+id/recycler_view">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/meal_title"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:textColor="@color/colorPrimaryDark"/>
-
     <Button android:id="@+id/carbohydrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

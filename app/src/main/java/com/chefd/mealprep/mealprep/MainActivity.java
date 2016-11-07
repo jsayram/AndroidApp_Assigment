@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         dinnerButton = (Button) findViewById(R.id.dinner);
         bmiButton = (Button) findViewById(R.id.BMI_Button);
         calorieButton = (Button) findViewById(R.id.CalorieButton);
-        aboutmeButton = (Button) findViewById(R.id.Aboutme);
+        aboutmeButton = (Button) findViewById(R.id.aboutme);
     }
 
     @Override
