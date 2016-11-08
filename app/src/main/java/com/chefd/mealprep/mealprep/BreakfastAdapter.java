@@ -16,11 +16,11 @@ import java.util.Map;
  */
 
 public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.ViewHolder> {
-    public static Integer count=0,hashcode=0;
+    public static Integer count = 0;
+    public static Integer hashcode = 0;
     ArrayList<FoodIdenityHolder> foodList;
     public static int currentPosition;
     public int hash = hashCode();
-
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -39,8 +39,8 @@ public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.View
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.food_swipe,parent,false);
-        ViewHolder viewHolder = new ViewHolder((LinearLayout)view);
+                .inflate(R.layout.food_swipe, parent, false);
+        ViewHolder viewHolder = new ViewHolder((LinearLayout) view);
         return viewHolder;
     }
 

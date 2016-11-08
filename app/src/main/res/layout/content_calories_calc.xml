@@ -31,12 +31,13 @@
         android:layout_below="@+id/textBmr"
         android:layout_marginTop="19dp"
         android:ems="10"
-        android:hint="Age"
-        android:textColorHint="#FFF"
+        android:hint="(age)"
         android:inputType="number"
         android:textAlignment="center"
+        android:textColorHint="#FFF"
         android:textSize="18sp"
-        android:textStyle="normal|italic" />
+        android:textStyle="normal|italic"
+        android:textColor="#fff" />
 
     <TextView
         android:id="@+id/textGender"
@@ -47,8 +48,8 @@
         android:layout_alignLeft="@+id/textWeight"
         android:layout_alignStart="@+id/textWeight"
         android:text="Gender:"
-        android:textColor="#FFF"
         android:textAlignment="center"
+        android:textColor="#FFF"
         android:textSize="18sp" />
 
     <CheckBox
@@ -62,12 +63,11 @@
         android:checked="false"
         android:onClick="onCheckboxClicked"
         android:text="Female"
-        android:textColor="#FFF"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#FFF" />
 
     <TextView
         android:id="@+id/textAge"
-        android:textColor="#FFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/editAge"
@@ -76,6 +76,8 @@
         android:layout_toStartOf="@+id/editAge"
         android:text="AGE:"
         android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textColorHint="#ffffff"
         android:textSize="18sp" />
 
     <TextView
@@ -87,9 +89,9 @@
         android:fontFamily="serif"
         android:text="Basal Metabolic Rate"
         android:textAlignment="center"
+        android:textColor="#FFF"
         android:textSize="24sp"
         android:textStyle="normal|bold"
-        android:textColor="#FFF"
         android:typeface="normal" />
 
     <EditText
@@ -101,24 +103,25 @@
         android:layout_below="@+id/editAge"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:textColor="#FFF"
         android:hint="Weight (lbs)"
-        android:textColorHint="#FFF"
         android:inputType="number"
         android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
         android:textStyle="normal|italic" />
 
     <TextView
         android:id="@+id/textWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FFF"
         android:layout_alignBaseline="@+id/editWeight"
         android:layout_alignBottom="@+id/editWeight"
         android:layout_toLeftOf="@+id/editWeight"
         android:layout_toStartOf="@+id/editWeight"
         android:text="Weight:"
         android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
         android:textSize="18sp" />
 
     <CheckBox
@@ -132,38 +135,9 @@
         android:checked="true"
         android:onClick="onCheckboxClicked"
         android:text="Male"
-        android:textColor="#FFF"
-        android:textAlignment="center" />
-
-    <TextView
-        android:id="@+id/textHeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editHeight"
-        android:layout_alignBottom="@+id/editHeight"
-        android:layout_toLeftOf="@+id/editWeight"
-        android:layout_toStartOf="@+id/editWeight"
-        android:text=" Height:"
-        android:textColor="#FFF"
         android:textAlignment="center"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/editHeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/submitButton"
-        android:layout_marginBottom="13dp"
-        android:layout_toEndOf="@+id/textGender"
-        android:layout_toRightOf="@+id/textGender"
-        android:ems="10"
         android:textColor="#FFF"
-        android:hint="Height (inches)"
-        android:textColorHint="#FFF"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textStyle="normal|italic"
-        tools:text="66" />
+        android:textColorHint="#FFF" />
 
     <Button
         android:id="@+id/calorieviewButton"
@@ -185,10 +159,9 @@
         android:layout_marginBottom="12dp"
         android:text="@string/textbmrdescription"
         android:textColor="#FFF"
-        />
+        android:textColorHint="#FFF" />
 
     <TextView
-        android:textColor="#FFF"
         android:id="@+id/textResults"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -200,47 +173,54 @@
         android:layout_marginRight="18dp"
         android:text=" "
         android:textAlignment="center"
+        android:textColor="#FFF"
         android:textSize="24sp" />
 
     <EditText
+        android:id="@+id/editHeighti"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editHeighti"
         android:layout_alignBaseline="@+id/editHeightf"
         android:layout_alignBottom="@+id/editHeightf"
-        android:layout_alignRight="@+id/textBmr"
         android:layout_alignEnd="@+id/textBmr"
+        android:layout_alignRight="@+id/textBmr"
+        android:ems="10"
         android:hint="(in)"
+        android:inputType="number"
         android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
         android:textStyle="normal|italic" />
 
     <TextView
         android:id="@+id/textHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" Height:"
-        android:textAlignment="center"
-        android:textSize="18sp"
         android:layout_alignBaseline="@+id/editHeightf"
         android:layout_alignBottom="@+id/editHeightf"
         android:layout_toLeftOf="@+id/editWeight"
-        android:layout_toStartOf="@+id/editWeight" />
+        android:layout_toStartOf="@+id/editWeight"
+        android:text=" Height:"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editHeightf"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:textStyle="normal|italic"
         android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/fcheckBox"
+        android:layout_marginTop="20dp"
         android:layout_toLeftOf="@+id/editHeighti"
         android:layout_toStartOf="@+id/editHeighti"
-        android:layout_marginTop="20dp"
+        android:ems="10"
         android:hint="(ft)"
-        android:textAlignment="center" />
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
+        android:textStyle="normal|italic" />
 
 
 </RelativeLayout>

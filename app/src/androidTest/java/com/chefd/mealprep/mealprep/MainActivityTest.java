@@ -28,9 +28,9 @@ public class MainActivityTest {
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule(MainActivity.class);
 
     @Test   /*Given the user is on the main activity
-When the user press the breakfast button
-Then the user will see a breakfast meal*/
-    public void CheckBreakfastButton(){
+                When the user press the breakfast button
+                    Then the user will see a breakfast meal*/
+    public void CheckBreakfastButton() {
         //given Im in the current activity
         onView(withId(R.id.breakfast)).check(matches(isDisplayed()));
         // when press the button breakfast button

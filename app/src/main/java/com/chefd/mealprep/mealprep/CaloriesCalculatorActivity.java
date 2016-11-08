@@ -191,8 +191,6 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
         mcheckBox = (CheckBox) findViewById(R.id.mcheckBox);
         fcheckBox = (CheckBox) findViewById(R.id.fcheckBox);
         calorieviewButton = (Button) findViewById(R.id.calorieviewButton);
-
     }
-
 
 } //end of class
