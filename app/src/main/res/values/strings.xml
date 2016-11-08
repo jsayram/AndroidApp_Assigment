@@ -55,10 +55,17 @@
                             company was founded in 2016 at some alloted time. The reason im writing
                             this much is so that i can see if the text view and scroll view are
                             working together and that the scroll view is able to scroll.</string>
+    <string name="overnight_oats">Peanut Butter Banana Overnight Oats</string>
+    <string name="seed_pudding">Creamy Blueberry Chia Seed Pudding</string>
+    <string name="yogurt_granola">Super Simple Yogurt and Granola Parfaits</string>
+    <string name="Kale_hash">Sweet Potato Kale Hash</string>
+    <string name="breakfast_burritos">Breakfast Burritos</string>
     <string name="title_activity_calories">CaloriesActivity</string>
     <string name="title_activity_calorie_view">CalorieViewActivity</string>
     <string name="viewcalviewText">Go to Food Calorie List</string>
     <string name="textbmrdescription">Basal metabolic rate (BMR), is the amount of energy expressed in calories that a person needs to keep the body functioning at rest. This amount of calories is HIGHLY recommended.</string>
     <string name="title_activity_aboutme">aboutme</string>
+    <string name="calorie_counter_title">Calorie Counter</string>
+    <string name="about_me_title">Aboutme</string>
 
 </resources>
