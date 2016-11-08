@@ -1,6 +1,7 @@
 package com.chefd.mealprep.mealprep;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -30,6 +31,11 @@ public class BreakfastActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breakfast);
         findViews();
+
+        // makes sure the activity stays in portrait mode
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
         FoodIdenityHolder foodIdenityHolder =
                 new FoodIdenityHolder(R.drawable.pancakes,R.string.banana_pancakes);
         foodPicList.add(foodIdenityHolder);

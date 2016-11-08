@@ -66,13 +66,15 @@
             android:layout_height="wrap_content"
             android:id="@+id/CalorieButton" />
 
-        <Button
-            android:id="@+id/Aboutme"
-            android:layout_width="224dp"
-            android:layout_height="wrap_content"
-            android:text="About me"
-            android:textColor="@color/wordColor" />
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textColor="@color/wordColor"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

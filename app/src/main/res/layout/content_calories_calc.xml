@@ -121,41 +121,14 @@
         android:id="@+id/mcheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editHeight"
-        android:layout_alignStart="@+id/editHeight"
+        android:layout_alignLeft="@+id/editHeightf"
+        android:layout_alignStart="@+id/editHeightf"
         android:layout_below="@+id/editWeight"
         android:layout_marginTop="19dp"
         android:checked="true"
         android:onClick="onCheckboxClicked"
         android:text="Male"
         android:textAlignment="center" />
-
-    <TextView
-        android:id="@+id/textHeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editHeight"
-        android:layout_alignBottom="@+id/editHeight"
-        android:layout_toLeftOf="@+id/editWeight"
-        android:layout_toStartOf="@+id/editWeight"
-        android:text=" Height:"
-        android:textAlignment="center"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/editHeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/submitButton"
-        android:layout_marginBottom="13dp"
-        android:layout_toEndOf="@+id/textGender"
-        android:layout_toRightOf="@+id/textGender"
-        android:ems="10"
-        android:hint="Height (inches)"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textStyle="normal|italic"
-        tools:text="66" />
 
     <Button
         android:id="@+id/calorieviewButton"
@@ -190,6 +163,46 @@
         android:text=" "
         android:textAlignment="center"
         android:textSize="24sp" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editHeighti"
+        android:layout_alignBaseline="@+id/editHeightf"
+        android:layout_alignBottom="@+id/editHeightf"
+        android:layout_alignRight="@+id/textBmr"
+        android:layout_alignEnd="@+id/textBmr"
+        android:hint="(in)"
+        android:textAlignment="center"
+        android:textStyle="normal|italic" />
+
+    <TextView
+        android:id="@+id/textHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Height:"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/editHeightf"
+        android:layout_alignBottom="@+id/editHeightf"
+        android:layout_toLeftOf="@+id/editWeight"
+        android:layout_toStartOf="@+id/editWeight" />
+
+    <EditText
+        android:id="@+id/editHeightf"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textStyle="normal|italic"
+        android:layout_width="100dp"
+        android:layout_below="@+id/fcheckBox"
+        android:layout_toLeftOf="@+id/editHeighti"
+        android:layout_toStartOf="@+id/editHeighti"
+        android:layout_marginTop="20dp"
+        android:hint="(ft)"
+        android:textAlignment="center" />
 
 
 </RelativeLayout>
