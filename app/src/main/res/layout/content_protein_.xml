@@ -23,7 +23,7 @@
         android:ems="10"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/editText"
+        android:id="@+id/protein_text"
         android:gravity="center"
         android:textAppearance="@android:style/TextAppearance.Large" />
 

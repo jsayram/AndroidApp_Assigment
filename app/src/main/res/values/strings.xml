@@ -58,7 +58,7 @@
     <string name="overnight_oats">Peanut Butter Banana Overnight Oats</string>
     <string name="seed_pudding">Creamy Blueberry Chia Seed Pudding</string>
     <string name="yogurt_granola">Super Simple Yogurt and Granola Parfaits</string>
-    <string name="Kale_hash">Sweet Potato Kale Hash</string>
+    <string name="kale_hash">Sweet Potato Kale Hash</string>
     <string name="breakfast_burritos">Breakfast Burritos</string>
     <string name="title_activity_calories">CaloriesActivity</string>
     <string name="title_activity_calorie_view">CalorieViewActivity</string>
@@ -67,5 +67,8 @@
     <string name="title_activity_aboutme">aboutme</string>
     <string name="calorie_counter_title">Calorie Counter</string>
     <string name="about_me_title">Aboutme</string>
+    <string name="carbs_kale_hash">Ingredients:1 large sweet potato(peeled) \n\n Instructions: Throw sweet potato peelings into skillet.</string>
+    <string name="protein_kale_hash">Ingredients: 4 Chicken Sausages(precooked) \n\n Instructions: Slice Chicken Sausages into skillet.</string>
+    <string name="veg_kale_hash">Ingredients: 1/2 Yellow Onion,finely diced \n 1 Red Pepper,finely diced \n 4 cups of Kale,deboned \n 1 tablespoon minced garlic \n\n Instructions Add in Red pepper with Sweet Potatoes and Chicken Sausages and then saute for 5-7 minutes. Add in kale and saute until kale has wilted then add seasoning, vineagar</string>
 
 </resources>

@@ -8,22 +8,22 @@ import android.widget.TextView;
 public class CarbsAcitivity extends AppCompatActivity {
 
     private ImageView image;
-    private TextView textView;
+    private TextView textView,titleView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carbs__acitivity);
-        /*so Brain here just find both the views for the activity
-        and then just use the setimageResource,and setText for both the text
-        and image view just look suggestions and the choose the right one*/
         FoodIdenityHolder foodIdenityHolder;
         Bundle bundle = getIntent().getExtras();
-        foodIdenityHolder =
-                new FoodIdenityHolder(bundle.getInt("currentMealImage"),
-                        bundle.getInt("currentMealString"));
+        foodIdenityHolder = new FoodIdenityHolder(bundle.getInt("currentMealImage"),
+                        bundle.getInt("currentMealString"),
+                bundle.getInt("currentMealCarbs"),null,null);
         image = (ImageView) findViewById(R.id.imageView_c1);
         image.setImageResource(foodIdenityHolder.getImageId());
+        titleView = (TextView) findViewById(R.id.carbohydrate_title_view);
+        titleView.setText(foodIdenityHolder.getStringId());
         textView = (TextView) findViewById(R.id.carbohydrates_textview);
+        textView.setText(foodIdenityHolder.getCarbsId());
     }
 }

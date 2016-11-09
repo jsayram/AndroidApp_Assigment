@@ -46,6 +46,7 @@ public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.View
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        currentPosition=position;
         holder.foodImage.setImageResource(foodList.get(position).getImageId());
 
     }

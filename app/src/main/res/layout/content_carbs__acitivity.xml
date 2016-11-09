@@ -19,7 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Carbohydrates"
         android:ems="10"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -28,7 +27,6 @@
         android:textAppearance="@android:style/TextAppearance.Large" />
 
     <TextView
-        android:text="@string/banana_pancakes_carbs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
