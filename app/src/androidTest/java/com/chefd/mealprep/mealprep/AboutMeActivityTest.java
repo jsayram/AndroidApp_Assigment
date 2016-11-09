@@ -13,28 +13,27 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 /**
  * Created by Jose Ramirez
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class BMITest {
+public class AboutMeActivityTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule(MainActivity.class);
 
-    @Test  /* Given im on the main activity
-              When the user presses the BMI Calculator button
-              Then the user is presented with a BMI chart to compare with others. */
-
-    public void CheckBmiButton(){
-        //find button on current activity.
-        onView(withId(R.id.BMI_Button)).check(matches(isDisplayed()));
-        //  press the button on current activity
-        onView(withId(R.id.BMI_Button)).perform(click());
+    @Test   /*Given I am on the home screen
+                When I click the about me button
+                    Then I am taken to the about page*/
+    public void CheckAboutMeButton() {
+        //given Im in the current activity check if wanted button is displayed
+        onView(withId(R.id.aboutButton)).check(matches(isDisplayed()));
+        // when press the button CalorieButton button
+        onView(withId(R.id.aboutButton)).perform(click());
+        // This make sure that the about me is visible with current item
         // This is a different activity no need to tell espresso , check what should be showing
-        onView(withId(R.id.textView2_BMI_Header)).check(matches(withText("BMI CHECKER")));
+        onView(withId(R.id.content_aboutme)).check(matches(isDisplayed()));
     }
 }

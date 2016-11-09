@@ -16,9 +16,8 @@ public class DataPlacer {
 
     // the following food ids ie. food1, food2, food3, etc ...correspond to the images in the
     // main-> assets as long as the image is a .png file just put the name of the image
-    //replacing food1, food2, food3 etc... with the correspoding image name you wish
+    //replacing food1, food2, food3 etc... with the corresponding image name you wish
     //to replace it with.
-
 
     static {
         addProduct("bananas",  // file name without .png extension

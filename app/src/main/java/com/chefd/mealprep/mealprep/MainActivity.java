@@ -1,6 +1,7 @@
 package com.chefd.mealprep.mealprep;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button dinnerButton;
     private Button bmiButton;
     private Button calorieButton;
-    private Button aboutmeButton;
+    private Button aboutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         findViewsContentMain();
         setUpContentMainButtons();
+
+        // makes sure the activity stays in portrait mode
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,BreakfastActivity.class);
                 startActivity(intent);
-
             }
         });
         bmiButton.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,BmiCalculatorActivity.class);
                 startActivity(intent);
-
             }
         });
         lunchButton.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Dinner Options", Toast.LENGTH_SHORT).show();
-
             }
         });
 
@@ -82,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        aboutmeButton.setOnClickListener(new View.OnClickListener() {
+        aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,aboutme.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,AboutActivity.class);
                 startActivity(intent);
             }
         });
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         dinnerButton = (Button) findViewById(R.id.dinner);
         bmiButton = (Button) findViewById(R.id.BMI_Button);
         calorieButton = (Button) findViewById(R.id.CalorieButton);
-        aboutmeButton = (Button) findViewById(R.id.aboutme);
+        aboutButton = (Button) findViewById(R.id.aboutButton);
     }
 
     @Override

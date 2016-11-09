@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             />
 
-        <Button  android:id="@+id/aboutme"
+        <Button  android:id="@+id/aboutButton"
             android:layout_width="150sp"
             android:layout_height="wrap_content"
             android:text="@string/about_me_title"

@@ -10,11 +10,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.List;
 
 public class CaloriesCalculatorActivity extends AppCompatActivity {
 
@@ -22,7 +19,8 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
     private Button calorieviewButton;
     private EditText editAge;
     private EditText editWeight;
-    private EditText editHeight;
+    private EditText editHeightf;
+    private EditText editHeighti;
     private TextView textResults;
     private CheckBox fcheckBox;
     private CheckBox mcheckBox;
@@ -41,7 +39,6 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
         //setContentViews
         findViewsContentMain();
         setUpContentButtons();
-
 
         // this makes sure that the keyboard doesn't push the layout up
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
@@ -79,42 +76,71 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
     private void makeCalculations() {
         // Gather Numbers
         if (editAge.getText().toString().equals("")
-                || editHeight.getText().toString().equals("")
+                || editHeightf.getText().toString().equals("")
+                || editHeighti.getText().toString().equals("")
                 || editWeight.getText().toString().equals("")) {
             Toast.makeText(this, "You are missing an entry, Please Complete",
                     Toast.LENGTH_LONG).show();
             return;
         } else {
 
-
             double age = Double.valueOf(editAge.getText().toString());
-            double height = Double.valueOf(editHeight.getText().toString());
-            double weight = Double.valueOf(editHeight.getText().toString());
+            double heightF = Double.valueOf(editHeightf.getText().toString());
+            double heightI = Double.valueOf(editHeighti.getText().toString());
+            double weight = Double.valueOf(editWeight.getText().toString());
+
+
+
+            double heightIn;
+            //math for height feet and inches call it heightin
+            heightIn = (heightF * 12) + heightI;
+
+            //varify if entries are resonable
+            if (age > 150 || age < 1) {
+                Toast.makeText(this, "Drop this app now and go talk to someone. "
+                        + "You are older than any man/woman in recorded history.",
+                        Toast.LENGTH_LONG).show();
+                return;
+            } else if (heightIn > 160 || heightIn < 5) {
+                Toast.makeText(this, "Height is not humanly possible",
+                        Toast.LENGTH_LONG).show();
+                return;
+            } else if (weight > 3000) {
+                Toast.makeText(this, "CHILL BRUH, YOU NOT THAT HEAVY!!",
+                        Toast.LENGTH_LONG).show();
+                return;
+            }
 
             double weightK;
             double heightCm;
 
             weightK = weight / 2.2;  // weight from pounds to kilograms
-            heightCm = height * 2.54; //height from inches to centimeters
+            heightCm = heightIn * 2.54; //height from inches to centimeters
 
             //calculating BMR based on sex
             if (sex == 1) {  //equation for females
-                if (editAge.equals("") || editHeight.equals("") || editWeight.equals("")) {
+                if (editAge.equals("")
+                        || editHeightf.equals("")
+                        || editHeighti.equals("")
+                        || editWeight.equals("")) {
                     result = 0;
                     Toast.makeText(this, "You are missing an entry, Please Complete",
                             Toast.LENGTH_LONG).show();
                     return;
                 } else {
-                    result = (665.09 + (9.56 * weightK) + (1.84 * heightCm) - (4.67 * age)) * 1.37;
+                    result = (665.09 + (9.56 * weightK) + (1.84 * heightCm) - (4.67 * age));
                 }
             } else {       //equation for male
-                if (editAge.equals("") || editHeight.equals("") || editWeight.equals("")) {
+                if (editAge.equals("")
+                        || editHeightf.equals("")
+                        || editHeighti.equals("")
+                        || editWeight.equals("")) {
                     result = 0;
                     Toast.makeText(this, "You are missing an entry, Please Complete",
                             Toast.LENGTH_LONG).show();
                     return;
                 } else {
-                    result = (66.47 + (13.75 * weightK) + (5.0 * heightCm) - (6.75 * age)) * 1.37;
+                    result = (66.47 + (13.75 * weightK) + (5.0 * heightCm) - (6.75 * age));
                 }
             }
             textResults.setText("Minimum Calories Per Day: " + (int) result);
@@ -157,15 +183,14 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
 
     private void findViewsContentMain() {
         editAge = (EditText) findViewById(R.id.editAge);
-        editHeight = (EditText) findViewById(R.id.editHeight);
+        editHeightf = (EditText) findViewById(R.id.editHeightf);
+        editHeighti = (EditText) findViewById(R.id.editHeighti);
         editWeight = (EditText) findViewById(R.id.editWeight);
         textResults = (TextView) findViewById(R.id.textResults);
         submitButton = (Button) findViewById(R.id.submitButton);
         mcheckBox = (CheckBox) findViewById(R.id.mcheckBox);
         fcheckBox = (CheckBox) findViewById(R.id.fcheckBox);
         calorieviewButton = (Button) findViewById(R.id.calorieviewButton);
-
     }
-
 
 } //end of class
