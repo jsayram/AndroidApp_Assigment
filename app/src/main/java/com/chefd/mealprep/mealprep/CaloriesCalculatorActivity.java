@@ -128,7 +128,8 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
                             Toast.LENGTH_LONG).show();
                     return;
                 } else {
-                    result = (665.09 + (9.56 * weightK) + (1.84 * heightCm) - (4.67 * age));
+                    result = (665.09 + (9.56 * weightK)
+                            + (1.84 * heightCm) - (4.67 * age));
                 }
             } else {       //equation for male
                 if (editAge.equals("")
@@ -140,7 +141,8 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
                             Toast.LENGTH_LONG).show();
                     return;
                 } else {
-                    result = (66.47 + (13.75 * weightK) + (5.0 * heightCm) - (6.75 * age));
+                    result = (66.47 + (13.75 * weightK)
+                            + (5.0 * heightCm) - (6.75 * age));
                 }
             }
             textResults.setText("Minimum Calories Per Day: " + (int) result);

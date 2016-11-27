@@ -13,6 +13,43 @@
 This application (MealPrep) helps users to decide on what meal they want to prep and how to prep the
 meal they desire.
 
+# Second Iteration (11/08/2016):
+We have chosen to implement these for our second iteration; it includes three more user stories. In addition, we have included Checkstyle, which will be used to ensure "code cleanliness".
+
+# Feature Name: Calorie Counter
+
+	        As a person who is a Nutritionist 
+    	        So that I know how many calories I should be intaking
+   	        I want to calculate them
+
+Users can input their age, weight, gender, and height. This will generate an
+average minimum caloric intake that the user should be consuming.
+
+
+# Feature Name: View Next Meal (swipe)
+
+	      	As a user
+		So that I can see the next meal
+		I want to be able to swipe and view it
+
+If a user is currently viewing a meal that does not satisfy them, the user
+can swipe to the left to view another meal until the user finds a meal that is
+appealing.
+
+
+# Feature Name: View Calorie Food List
+
+		As a dieter
+		So that I want to understand how many calories each food has
+		I want to be able to view each food with its corresponding calorie
+
+Several individual foods has been added with its corresponding caloie to help
+the user understand why a certain meal may have more calories than expected.
+
+Staying agile helped us make changes to improve our application.
+
+
+-------------------------------------------------------------------------------------------------
 # First Iteration(10/12/2016):
 
 We have chosen to implement these for our first iteration; it defines the main purpose
@@ -24,9 +61,9 @@ of our application. The three user stories implemented are displayed below:
 		So that I can search for an appropriate meal
 		I want to eat according to what time of the day it is
 
-
 One breakfast meal is added to the application where a user can view a picture of the full
 breakfast meal.
+
 
 # Feature Name: View Recipe
 
