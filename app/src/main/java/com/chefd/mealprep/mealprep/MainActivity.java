@@ -64,14 +64,16 @@ public class MainActivity extends AppCompatActivity {
         lunchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Lunch Options", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,LunchActivity.class);
+                startActivity(intent);
             }
         });
 
         dinnerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Dinner Options", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,DinnerActivity.class);
+                startActivity(intent);
             }
         });
 

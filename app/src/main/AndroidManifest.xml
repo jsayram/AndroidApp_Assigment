@@ -52,7 +52,9 @@
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_activity_aboutme"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LunchActivity" />
+        <activity android:name=".DinnerActivity"></activity>
     </application>
 
 </manifest>

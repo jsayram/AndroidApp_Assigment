@@ -10,10 +10,10 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 
 /**
- * Created by artisja on 10/5/2016.
+ * Created by artisja on 11/25/2016.
  */
 
-public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.ViewHolder> {
+public class LunchAdapter extends RecyclerView.Adapter<LunchAdapter.ViewHolder> {
     public static Integer count = 0;
     public static Integer hashcode = 0;
     ArrayList<FoodIdenityHolder> foodList;
@@ -30,21 +30,21 @@ public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.View
         }
     }
 
-    public BreakfastAdapter(ArrayList<FoodIdenityHolder> list) {
+    public LunchAdapter(ArrayList<FoodIdenityHolder> list) {
         foodList = list;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public LunchAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.food_swipe, parent, false);
-        ViewHolder viewHolder = new ViewHolder((LinearLayout) view);
+        LunchAdapter.ViewHolder viewHolder = new LunchAdapter.ViewHolder((LinearLayout) view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        currentPosition=position;
+    public void onBindViewHolder(LunchAdapter.ViewHolder holder, int position) {
+        currentPosition = position;
         holder.foodImage.setImageResource(foodList.get(position).getImageId());
 
     }

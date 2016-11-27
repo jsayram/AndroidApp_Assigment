@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dinner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue"
+    tools:context="com.chefd.mealprep.mealprep.LunchActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_dinner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true">
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/recycler_view_dinner">
+
+        <Button android:id="@+id/carbohydrate_dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Carbohydrates"
+            android:layout_gravity="center"/>
+
+        <Button android:id="@+id/protein_dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/protein"
+            android:layout_gravity="center"/>
+
+        <Button android:id="@+id/vegetables_dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Vegetables"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <Button android:id="@+id/favorite_button_dinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Favorite"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

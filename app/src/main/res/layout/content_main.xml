@@ -41,7 +41,7 @@
     <Button android:id="@+id/lunch"
         android:layout_width="150sp"
         android:layout_height="wrap_content"
-        android:text="@string/MainMiddleButton"
+        android:text="@string/lunch_title"
         android:textColor="@color/wordColor"
         android:layout_below="@+id/breakfast"/>
 
