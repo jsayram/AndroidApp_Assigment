@@ -4,7 +4,7 @@
     <string name="title_activity_main2">BLD_Activity</string>
     <string name="title_activity_bmi_screen_">BMI_Activity</string>
     <string name="Testing_HelloWorld">Hello World Its Chef-D\'s Meal Prep!</string>
-    <string name="OverHeadMainScreenText">Findr</string>
+    <string name="OverHeadMainScreenText">MealPrep</string>
     <string name="MainTopButton">Breakfast</string>
     <string name="lunch_title">Lunch</string>
     <string name="MainBottomButton">Dinner</string>
