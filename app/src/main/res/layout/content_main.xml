@@ -71,6 +71,12 @@
             android:text="@string/about_me_title"
             android:textColor="@color/wordColor" />
 
+        <Button
+            android:text="Note"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/noteButton" />
+
     </LinearLayout>
 
 </RelativeLayout>

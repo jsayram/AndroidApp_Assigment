@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bmiButton;
     private Button calorieButton;
     private Button aboutButton;
+    private Button noteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +93,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        noteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,NoteActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -104,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         bmiButton = (Button) findViewById(R.id.BMI_Button);
         calorieButton = (Button) findViewById(R.id.CalorieButton);
         aboutButton = (Button) findViewById(R.id.aboutButton);
+        noteButton = (Button) findViewById(R.id.noteButton);
     }
 
     @Override

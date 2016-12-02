@@ -79,5 +79,6 @@
     <string name="carbs_kale_hash">Ingredients:1 large sweet potato(peeled) \n\n Instructions: Throw sweet potato peelings into skillet.</string>
     <string name="protein_kale_hash">Ingredients: 4 Chicken Sausages(precooked) \n\n Instructions: Slice Chicken Sausages into skillet.</string>
     <string name="veg_kale_hash">Ingredients: 1/2 Yellow Onion,finely diced \n 1 Red Pepper,finely diced \n 4 cups of Kale,deboned \n 1 tablespoon minced garlic \n\n Instructions Add in Red pepper with Sweet Potatoes and Chicken Sausages and then saute for 5-7 minutes. Add in kale and saute until kale has wilted then add seasoning, vineagar</string>
+    <string name="title_activity_note">NoteActivity</string>
 
 </resources>
