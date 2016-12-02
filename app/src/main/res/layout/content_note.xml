@@ -13,4 +13,11 @@
     tools:context="com.chefd.mealprep.mealprep.NoteActivity"
     tools:showIn="@layout/activity_note">
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/notes"
+        android:id="@+id/imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
