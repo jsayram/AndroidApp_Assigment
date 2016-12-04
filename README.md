@@ -13,6 +13,36 @@
 This application (MealPrep) helps users to decide on what meal they want to prep and how to prep the
 meal they desire.
 
+# Third Iteration (12/04/2016):
+We have chosen to implement these for our third iteration; it includes three more user stories. In addition, we have included Checkstyle, which will be used to ensure "code cleanliness" and unit tests as well.
+
+# Feature Name: Lunch
+
+		As a person who wants lunch
+		So that I can search for an appropriate meal
+		I want to eat according to what time of the day it is\
+		
+Few lunch meals are added to the application where a user can view a picture of the full
+lunch meal.
+
+# Feature Name: Add Note
+
+		As a picky eater
+		So that I can add small changes to a meal
+		I want to cook the meal I made changes to
+		
+Users can add quick notes if they have a different preference of how a certain recepie should
+be made.
+
+# Feature Name: Dinner
+
+		As a person who wants dinner
+		So that I can search for an appropriate meal
+		I want to eat according to what time of the day it is
+		
+Users can now view the dinner menu. A few more recepies have been added where users can view
+a picture of the full dinner meal.
+
 # Second Iteration (11/08/2016):
 We have chosen to implement these for our second iteration; it includes three more user stories. In addition, we have included Checkstyle, which will be used to ensure "code cleanliness".
 
