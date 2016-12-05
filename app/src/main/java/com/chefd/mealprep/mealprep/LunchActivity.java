@@ -14,7 +14,10 @@ import java.util.Hashtable;
 
 public class LunchActivity extends Activity {
 
-    private Button favoriteButton,carbohydrateButton,proteinButton,vegetablesButton;
+    private Button favoriteButton;
+    private Button carbohydrateButton;
+    private Button proteinButton;
+    private Button vegetablesButton;
     LunchAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView recyclerView;
@@ -33,14 +36,19 @@ public class LunchActivity extends Activity {
     }
 
     private void setUpData() {
-        FoodIdenityHolder foodIdenityHolder = new FoodIdenityHolder(R.drawable.food_album,R.string.MADE_title,R.string.M_description,R.string.D_description,R.string.E_description);
+        FoodIdenityHolder foodIdenityHolder =
+                new FoodIdenityHolder(R.drawable.food_album,
+                        R.string.MADE_title,
+                        R.string.M_description,
+                        R.string.D_description,
+                        R.string.E_description);
         ingredientTable.put(foodIdenityHolder.getCarbsId(),R.drawable.m_red);
         ingredientTable.put(foodIdenityHolder.getProteinId(),R.drawable.d_green);
         ingredientTable.put(foodIdenityHolder.getVegFruitId(),R.drawable.e_yellow);
         foodPicList.add(foodIdenityHolder);
     }
 
-    private void setUpRecyclerView(){
+    private void setUpRecyclerView() {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_lunch);
         adapter = new LunchAdapter(foodPicList);
         recyclerView.setAdapter(adapter);
@@ -60,14 +68,14 @@ public class LunchActivity extends Activity {
         favoriteButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"send favorite click to favorite activity",Toast.LENGTH_LONG);
             }
         });
 
         carbohydrateButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 FoodIdenityHolder foodIdenityCarbs = foodPicList.get(LunchAdapter.currentPosition);
                 Intent intent = new Intent(LunchActivity.this,CarbsAcitivity.class);
                 intent.putExtra("currentMealImage",ingredientTable.get(foodIdenityCarbs.getCarbsId()));
@@ -79,7 +87,7 @@ public class LunchActivity extends Activity {
 
         proteinButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 FoodIdenityHolder foodIdenityProtein = foodPicList.get(LunchAdapter.currentPosition);
                 Intent intent = new Intent(LunchActivity.this,ProteinActivity.class);
                 intent.putExtra("currentMealImage",ingredientTable.get(foodIdenityProtein.getProteinId()));
@@ -91,7 +99,7 @@ public class LunchActivity extends Activity {
 
         vegetablesButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 FoodIdenityHolder foodIdenityVeg = foodPicList.get(LunchAdapter.currentPosition);
                 Intent intent = new Intent(LunchActivity.this,VegetablesActivity.class);
                 intent.putExtra("currentMealImage",ingredientTable.get(foodIdenityVeg.getVegFruitId()));

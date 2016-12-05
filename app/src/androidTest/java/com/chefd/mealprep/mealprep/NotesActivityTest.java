@@ -13,26 +13,27 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 /**
  * Created by Jose Ramirez
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class BreakfastActivityTest {
-    @Rule
-    public ActivityTestRule<BreakfastActivity> mActivityRule = new ActivityTestRule(BreakfastActivity.class);
+public class NotesActivityTest {
 
-    @Test  /*Given the user is viewing a meal
-    When the user press the protein button
-    Then the user will see a protein recipe*/
-    public void CheckBreakfastProteinButton(){
-        //find button on current activity.
-        onView(withId(R.id.protein)).check(matches(isDisplayed()));
-        //  press the button on current activity
-        onView(withId(R.id.protein)).perform(click());
+    @Rule
+    public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule(MainActivity.class);
+
+    @Test   /*Given I have a meal I’d like append it’s cooking
+                when I push the add meal note button
+                   then it takes me to a user input screen*/
+    public void CheckNotesButton() {
+        //given Im in the current activity
+        onView(withId(R.id.noteButton)).check(matches(isDisplayed()));
+        // when press the button for notes
+        onView(withId(R.id.noteButton)).perform(click());
+        // This make sure that the noteIcon is visible with current item
         // This is a different activity no need to tell espresso , check what should be showing
-        onView(withId(R.id.protein_text)).check(matches(withText("Banana Pancakes")));
+        onView(withId(R.id.noteImage)).check(matches(isDisplayed()));
     }
 }

@@ -2,6 +2,7 @@ package com.chefd.mealprep.mealprep;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,6 +13,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 public class CaloriesCalculatorActivity extends AppCompatActivity {
 
@@ -26,6 +32,11 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
     private CheckBox mcheckBox;
     private double result;
     private int sex;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
 
     @Override
@@ -52,6 +63,9 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
                 makeCalculations();
             }
         });
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     } //end of on create method
 
     //onclick listener for submit button
@@ -90,7 +104,6 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
             double weight = Double.valueOf(editWeight.getText().toString());
 
 
-
             double heightIn;
             //math for height feet and inches call it heightin
             heightIn = (heightF * 12) + heightI;
@@ -98,7 +111,7 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
             //varify if entries are resonable
             if (age > 150 || age < 1) {
                 Toast.makeText(this, "Drop this app now and go talk to someone. "
-                        + "You are older than any man/woman in recorded history.",
+                                + "You are older than any man/woman in recorded history.",
                         Toast.LENGTH_LONG).show();
                 return;
             } else if (heightIn > 160 || heightIn < 5) {
@@ -149,37 +162,34 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
         }
     }
 
-    //Checkbox on click listner
-
-    public void onCheckboxClicked(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
-        // Check which checkbox was clicked
+    //Checkbox on click listener
+    public void onCheckboxClicked(View view) { // Is the view now checked
+        boolean checked = ((CheckBox) view).isChecked();// Check which checkbox was clicked
         switch (view.getId()) {
-            case R.id.fcheckBox:
-                if (checked) {
-                    sex = 1;
-                    fcheckBox.setChecked(true);
-                    mcheckBox.setChecked(false);
-                } else {
-                    sex = 2;
-                    mcheckBox.setChecked(true);
-                    fcheckBox.setChecked(false);
-                }
-                break;
-            case R.id.mcheckBox:
-                if (checked) {
-                    sex = 2;
-                    mcheckBox.setChecked(true);
-                    fcheckBox.setChecked(false);
-                } else {
-                    sex = 1;
-                    fcheckBox.setChecked(true);
-                    mcheckBox.setChecked(false);
-                }
-                break;
-            default:
-                return;
+          case R.id.fcheckBox:
+              if (checked) {
+                  sex = 1;
+                  fcheckBox.setChecked(true);
+                  mcheckBox.setChecked(false);
+              } else {
+                  sex = 2;
+                  mcheckBox.setChecked(true);
+                  fcheckBox.setChecked(false);
+              }
+              break;
+          case R.id.mcheckBox:
+              if (checked) {
+                  sex = 2;
+                  mcheckBox.setChecked(true);
+                  fcheckBox.setChecked(false);
+              } else {
+                  sex = 1;
+                  fcheckBox.setChecked(true);
+                  mcheckBox.setChecked(false);
+              }
+              break;
+          default:
+              return;
         }
     }
 
@@ -195,4 +205,29 @@ public class CaloriesCalculatorActivity extends AppCompatActivity {
         calorieviewButton = (Button) findViewById(R.id.calorieviewButton);
     }
 
+
+    public Action getIndexApiAction() {
+        Thing object = new Thing.Builder()
+                .setName("CaloriesCalculator Page")
+                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+                .build();
+        return new Action.Builder(Action.TYPE_VIEW)
+                .setObject(object)
+                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+                .build();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        client.connect();
+        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        AppIndex.AppIndexApi.end(client, getIndexApiAction());
+        client.disconnect();
+    }
 } //end of class

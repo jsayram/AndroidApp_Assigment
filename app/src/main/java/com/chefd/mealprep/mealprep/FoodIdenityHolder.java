@@ -1,12 +1,12 @@
 package com.chefd.mealprep.mealprep;
 
-/**
- * Created by artisja on 10/7/2016.
- */
 
 public class FoodIdenityHolder {
 
-    private Integer stringId, carbsId, proteinId, vegFruitId;
+    private Integer stringId;
+    private Integer carbsId;
+    private Integer proteinId;
+    private Integer vegFruitId;
     private Integer imageId;
 
     public FoodIdenityHolder(Integer image, Integer string, Integer carbs, Integer proteins, Integer vegFruit) {

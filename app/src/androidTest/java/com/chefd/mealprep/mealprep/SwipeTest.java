@@ -40,5 +40,5 @@ public class SwipeTest {
         //click button on current activity
         onView(withId(R.id.carbohydrate)).perform(click());
         // This is a different activity no need to tell espresso , check what should be showing
-        onView(withId(R.id.carbohydrate_title_view)).check(matches(withText("Carbohydrates")));    }
+        onView(withId(R.id.carbohydrate_title_view)).check(matches(withText("Sweet Potato Kale Hash")));    }
 }

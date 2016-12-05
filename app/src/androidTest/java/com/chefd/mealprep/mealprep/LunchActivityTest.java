@@ -20,19 +20,19 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class BreakfastActivityTest {
+public class LunchActivityTest {
     @Rule
-    public ActivityTestRule<BreakfastActivity> mActivityRule = new ActivityTestRule(BreakfastActivity.class);
+    public ActivityTestRule<LunchActivity> mActivityRule = new ActivityTestRule(LunchActivity.class);
 
-    @Test  /*Given the user is viewing a meal
-    When the user press the protein button
-    Then the user will see a protein recipe*/
-    public void CheckBreakfastProteinButton(){
+    @Test  /*Given the user is on the main activity
+            When the user press the lunch button
+            Then the user will see a lunch meal*/
+    public void CheckLunchProteinButton(){
         //find button on current activity.
-        onView(withId(R.id.protein)).check(matches(isDisplayed()));
+        onView(withId(R.id.protein_lunch)).check(matches(isDisplayed()));
         //  press the button on current activity
-        onView(withId(R.id.protein)).perform(click());
+        onView(withId(R.id.protein_lunch)).perform(click());
         // This is a different activity no need to tell espresso , check what should be showing
-        onView(withId(R.id.protein_text)).check(matches(withText("Banana Pancakes")));
+        onView(withId(R.id.protein_text)).check(matches(withText("MADE")));
     }
 }

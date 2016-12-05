@@ -8,7 +8,8 @@ import android.widget.TextView;
 public class CarbsAcitivity extends AppCompatActivity {
 
     private ImageView image;
-    private TextView textView,titleView;
+    private TextView textView;
+    private TextView titleView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
